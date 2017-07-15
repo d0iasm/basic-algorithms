@@ -5,6 +5,7 @@ int h29(void){
   int b=0x9876;
   char s[]="Nagoya_Univ";
   printf("%d\n%x\n%d\n%x\n%c\n", a, a<<2, a|b, a^b, s[7]);
+  /* 61680 3c3c0 63734 6886 U*/
   return 0;
 }
 
