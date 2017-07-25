@@ -1,6 +1,5 @@
 [package]
 name = "rsgrep"
 version = "0.1.0"
-authors = ["Asami Doi <doiasami1219@gmail.com>"]
 
 [dependencies]
