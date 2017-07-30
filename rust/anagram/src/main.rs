@@ -4,6 +4,13 @@ use std::io;
 use std::io::BufRead;
 use std::path::Path;
 
+
+fn sorted_string(s: &str) -> String {
+    let mut s = s.chars().collect::<Vec<_>>();
+    s.sort();
+    s.into_iter().collect::<String>()
+}
+
 fn main() {
     println!("hello, world!")
     // 実行時にコマンドライン引数として単語を受け取る
