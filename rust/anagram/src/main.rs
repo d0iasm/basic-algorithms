@@ -11,6 +11,8 @@ fn sorted_string(s: &str) -> String {
     s.into_iter().collect::<String>()
 }
 
+struct Anagram(HashMap<String, Vec<String>>);
+
 fn main() {
     println!("hello, world!")
     // 実行時にコマンドライン引数として単語を受け取る
