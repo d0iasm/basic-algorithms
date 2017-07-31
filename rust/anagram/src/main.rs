@@ -13,6 +13,19 @@ fn sorted_string(s: &str) -> String {
 
 struct Anagram(HashMap<String, Vec<String>>);
 
+impl Anagram {
+    fn new<P: AsRef<Path>>(dictfile: P) -> Result<Self, io::Error> {
+        let file = File::open(dictfile)?;
+        let file = io::BufReader::new(file);
+        let mut anagram = Anagram(HashMap::new());
+        for line in file.lines() {
+            let word = line?;
+            anagram.add_word(word);
+        }
+        OK(anagram)
+    }
+}
+
 fn main() {
     println!("hello, world!")
     // 実行時にコマンドライン引数として単語を受け取る
