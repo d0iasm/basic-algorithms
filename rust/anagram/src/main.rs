@@ -24,6 +24,11 @@ impl Anagram {
         }
         OK(anagram)
     }
+
+    fn add_word(&mut self, word: String) {
+        let sorted = sorted_string(&word);
+        self.0.entry(sorted).or_insert(Vec::new()).push(word);
+    }
 }
 
 fn main() {
