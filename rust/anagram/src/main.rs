@@ -29,6 +29,11 @@ impl Anagram {
         let sorted = sorted_string(&word);
         self.0.entry(sorted).or_insert(Vec::new()).push(word);
     }
+
+    fn find(&self, word: &str) -> Option<&Vec<String>> {
+        let word = sorted_string(word);
+        self.0.get(&word)
+    }
 }
 
 fn main() {
