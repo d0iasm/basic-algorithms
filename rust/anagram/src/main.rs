@@ -22,7 +22,7 @@ impl Anagram {
             let word = line?;
             anagram.add_word(word);
         }
-        OK(anagram)
+        Ok(anagram)
     }
 
     fn add_word(&mut self, word: String) {
